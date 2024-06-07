@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Libro</title>
+    <link rel="stylesheet" href="/css/libroEdit.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Editar Libro</h1>
+        <form action="/libros/edit/<%= libro.id %>" method="POST">
+            <table>
+                <tr>
+                    <td><label for="titulo">Título:</label></td>
+                    <td><input type="text" id="titulo" name="titulo" value="<%= libro.titulo %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="autor">Autor:</label></td>
+                    <td><input type="text" id="autor" name="autor" value="<%= libro.autor %>"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center"> 
+                        <button type="submit">Guardar Cambios</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+
+</html>

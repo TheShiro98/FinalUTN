@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Alumno</title>
+    <link rel="stylesheet" href="/css/alumnoCreate.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Crear Alumno</h1>
+        <form action="/alumnos/create" method="POST">
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input type="text" name="nombre" id="nombre" required></td>
+                </tr>
+                <tr>
+                    <td><label for="apellido">Apellido:</label></td>
+                    <td><input type="text" name="apellido" id="apellido" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dni">DNI:</label></td>
+                    <td><input type="number" name="dni" id="dni" required min="0" oninput="validity.valid||(value='');"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <button type="submit">Crear</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

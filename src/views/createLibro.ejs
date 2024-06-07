@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevo Libro</title>
+    <link rel="stylesheet" href="/css/libroCreate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Nuevo Libro</h1>
+        <form action="/libros/create" method="POST">
+            <table>
+                <tr>
+                    <td><label for="titulo">Título:</label></td>
+                    <td><input type="text" id="titulo" name="titulo" required></td>
+                </tr>
+                <tr>
+                    <td><label for="autor">Autor:</label></td>
+                    <td><input type="text" id="autor" name="autor" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <button type="submit">Crear Libro</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

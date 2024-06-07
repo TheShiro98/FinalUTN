@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Alumno y Libro Asignado</title>
+    <link rel="stylesheet" href="/css/alumnoLibroEdit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Alumno y Libro Asignado</h1>
+        <form action="/alumnos-libros/edit/<%= alumno.id %>" method="POST">
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input type="text" name="nombre" id="nombre" value="<%= alumno.nombre %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="apellido">Apellido:</label></td>
+                    <td><input type="text" name="apellido" id="apellido" value="<%= alumno.apellido %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" id="email" value="<%= alumno.email %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="dni">DNI:</label></td>
+                    <td><input type="text" name="dni" id="dni" value="<%= alumno.dni %>"></td>
+                </tr>
+                <tr>
+                    <td><label for="libro">Libro Asignado:</label></td>
+                    <td>
+                        <select name="libroId" id="libro">
+                            <% libros.forEach(function(libro) { %>
+                                <option value="<%= libro.id %>" <%= libro.id === alumno.libros[0]?.id ? 'selected' : '' %>><%= libro.titulo %></option>
+                            <% }) %>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Actualizar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

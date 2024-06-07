@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Alumno</title>
+    <link rel="stylesheet" href="/css/alumnoEdit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Alumno</h1>
+        <form action="/alumnos/edit/<%= alumno.id %>" method="POST">
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input type="text" id="nombre" name="nombre" value="<%= alumno.nombre %>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="apellido">Apellido:</label></td>
+                    <td><input type="text" id="apellido" name="apellido" value="<%= alumno.apellido %>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" value="<%= alumno.email %>" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dni">DNI:</label></td>
+                    <td><input type="number" id="dni" name="dni" value="<%= alumno.dni %>" required min="0" oninput="validity.valid||(value='');"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <button type="submit">Guardar Cambios</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

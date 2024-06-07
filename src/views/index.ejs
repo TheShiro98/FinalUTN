@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <title> <%= title %> </title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo nav-link">Biblioteca</a>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <img src="img/menu.png" alt="menu">
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="/" class="nav-menu-link nav-link">INICIO</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="/alumnos" class="nav-menu-link nav-link">Alumno</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="/libros" class="nav-menu-link nav-link">Libro</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="/alumnos-libros" class="nav-menu-link nav-link">LISTADO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bienvenida">
+        <div class="textos-bienvenida">
+            <h1><%= title %></h1>
+            <p>Bienvenidos a <%= title %> </p>
+        </div>
+    </section>
+
+    <section class="wave-contenedor website">
+        <img src="img/fotoBienvenida.jpg" alt="Foto de bienvenida">
+        <div class="contenedor-textos-main">
+            <h2 class="titulo left">¡Bienvenido a nuestra biblioteca virtual!</h2>
+            <p class="parrafo">Explora nuestra extensa colección de libros y reserva tus favoritos desde la comodidad de
+                tu hogar. Sumérgete en mundos llenos de aventuras, conocimientos y emociones con solo unos clics.</p>
+        </div>
+    </section>
+
+
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left">Ayudemos a la Biblioteca</h2>
+            <p>Únete a nosotros para construir una comunidad comprometida con la educación. Tu ayuda es esencial para el
+                éxito de nuestra biblioteca.</p>
+        </div>
+    </section>
+
+
+    <!--Cartas de compras-->
+    <section class="cards contenedor">
+        <h2 class="titulo">Libros destacados</h2>
+        <div class="content-cards">
+            <article class="card">
+                <img src="./img/libros/harryPotter.jpg" alt="LibroHarryPotter">
+                <h3>Harry Potter y la camara secreta</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+            </article>
+
+            <article class="card">
+                <img src="./img/libros/TronoDeCristal.jpg" alt="LibroTronoDeCristal">
+                <h3>Trono de Cristal</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    
+            </article>
+
+            <article class="card">
+                <img src="./img/libros/CartasDeAmorAlosMuertos.jpg" alt="">
+                <h3>Cartas de Amor a los Muertos</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+            </article>
+
+            <article class="card">
+                <img src="./img/libros/JaponesLibro.jpg" alt="">
+                <h3>Nihongo I (Libro de japones)</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    
+            </article>
+
+            <article class="card">
+                <img src="./img/libros/LibroDeSarah.jpg" alt="">
+                <h3>El libro de Sarah I</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    
+            </article>
+
+            <article class="card">
+                <img src="./img/libros/LosJuegosDelHambre.jpg" alt="">
+                <h3>Los Juegos del Hambre</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+      
+            </article>
+
+        </div>
+    </section>
+
+    
+
+    <section id="info">
+        <div class="contactos-redes">
+            <div class="contactos">
+                <div class="contacto-info">
+                    <h3>Contactos</h3>
+                    <p>
+                        <b>Mail:</b> libroAyuda@biblioteca-virtual.com
+                        <br><b>Dirección:</b> Cerrito 899, CABA
+                        <br><b>Telefono:</b> 15-6248-5476
+                    </p>
+                </div>
+            </div>
+            <div class="redes-sociales">
+                <h3>Redes sociales</h3>
+                <div class="redesImg">
+                <img src="./img/redes/instagram.ico" class="imagen" alt="Instagram">
+                <img src="./img/redes/facebook.ico" class="imagen" alt="Facebook">
+                <img src="./img/redes/twitter-icone-1.ico" class="imagen" alt="Twitter">
+            </div>
+            </div>
+        </div>
+        <div class="mapa">
+            <h3>Ubicación</h3>
+            <div id="map-container"></div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2024 Copyright Biblioteca</p>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>

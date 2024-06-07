@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+/*Menu*/
+.header {
+    background-color:transparent;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color: #034574;
+    transition: 0.5s;
+}
+
+/* TOGGLE - Diseño del menu hamburguesa*/
+.nav-toggle {
+
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+
+    display: none;
+    cursor: pointer;
+}
+
+/* Celu */
+/*Menu hamburguesa*/
+@media (max-width: 764px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .header {
+        height: 60px;
+        background-color:#354F52 !important;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #52796F;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    .nav-menu-item :hover{
+        background: none;
+        color:#84A98C;
+    }
+
+  
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle img{
+        max-width: 40px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    /*
+    Esto hace que el usuario pueda usar el teclado 
+    en el menu hamburguesa. 
+    */
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+/*Cuerpo de la WEB*/
+
+.bienvenida{
+    background-image: url("../img/biblioteca.jpg");
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.textos-bienvenida{
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textos-bienvenida h1{
+    font-size: 60px;
+}
+
+.textos-bienvenida p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.textos-bienvenida a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: #a18cd1;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.info{
+    background-color: #52796F;
+    color: white;
+    
+}
+
+/* contenedor */
+.contenedor,
+.wave-contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0 0 80px 0;
+}
+.contenedor{
+    padding: 80px 0;
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo.left{
+    text-align: left;
+}
+
+.titulo.right{
+    text-align: right;
+}
+
+/* Section */
+
+.website{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.website img{
+    width: 48%;
+}
+
+.website .contenedor-textos-main{
+    width: 40%;
+    margin-top: 5rem;
+}
+
+.parrafo{
+    text-align: justify;
+    margin-top: 50px;
+}
+
+
+/*Libros destacados */
+/* Cards */
+
+.content-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+    margin-bottom: 20px;
+}
+
+.card:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+}
+
+.card img{
+    width: 100px; 
+    height:150px;
+    margin-top: 50px;
+}
+
+.card p{
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+/*Footer*/
+footer{ 
+    background: #2F3E46;
+    color: #fff;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
+/*Para celular o tablet*/
+
+@media screen and (max-width:800px){
+    .textos-bienvenida h1{
+        text-align: center;
+        font-size: 50px;
+    }
+    /* estilos generales */
+    .titulo{
+        font-size: 35px;
+    }
+
+    .titulo.left{
+        text-align: center;
+    }
+
+    .info p{
+        text-align: center;
+        color: white;
+    }
+
+    /* section */
+    .website{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .website img{
+        width: 100%;
+    }
+
+    .website .contenedor-textos-main{
+        width: 100%;
+    }
+
+    /* Cards */
+
+    .card{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* galeria */
+
+    .galeria-cont>img{
+        width: 48%;
+    }
+
+    /* last */
+
+    .last-section img{
+        width: 98%;
+    }
+
+    .last-section .contenedor-textos-main{
+        width: 98%;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+@media screen and (max-width:400px){
+    .titulo,
+    .textos-bienvenida h1{
+        font-size: 30px;
+    }
+
+    .textos-bienvenida p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .card{
+        height: 380px;
+    }
+
+    .website .contenedor-textos-main{
+        margin-bottom: 30px;
+    }
+
+    .galeria-cont>img{
+        width: 97%;
+    }
+}
+
+/* Contenedor principal */
+#info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgba(47, 163, 100, 0.39);
+}
+
+/* Contenedor de Contactos y Redes Sociales */
+.contactos-redes {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para la sección de Contactos */
+.contactos, .redes-sociales {
+    padding: 1rem;
+}
+
+/* Estilos para la sección del Mapa */
+
+
+.redesImg, .contacto-info{
+    text-align: center;
+}
+
+.contacto-info h3,
+.redes-sociales h3,
+.mapa h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 25px;
+}
+
+.imagen {
+    width: 50px;
+    height: 50px;
+    margin-top: 0.5rem;
+}
+
+/* Mapa de Google */
+#map-container {
+    width: 100%;
+    height: 17rem; /* Ajusta según necesidades */
+}
+
+@media screen and (max-width: 768px) {
+    #info {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    .contactos-redes, .mapa {
+        grid-column: span 1; /* Ocupa toda la anchura */
+    }
+}

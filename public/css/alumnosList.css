@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: Arial, sans-serif;
+}
+.general {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    background-image: url("../img/biblioteca.jpg");
+    width: 100%;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a button {
+    display: block;
+    margin: 0 auto 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a button:hover {
+    background-color: #218838;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #157d59;
+    color: white;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: inline;
+}
+
+@media (max-width: 800px) {
+    .container {
+        padding: 15px;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+/*Menu*/
+.header {
+    background-color:transparent;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color: #034574;
+    transition: 0.5s;
+}
+
+/* TOGGLE - Diseño del menu hamburguesa*/
+.nav-toggle {
+
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+
+    display: none;
+    cursor: pointer;
+}
+
+/* Celu */
+/*Menu hamburguesa*/
+@media (max-width: 764px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .header {
+        height: 60px;
+        background-color:#354F52 !important;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #52796F;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    .nav-menu-item :hover{
+        background: none;
+        color:#84A98C;
+    }
+
+  
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle img{
+        max-width: 40px;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    /*
+    Esto hace que el usuario pueda usar el teclado 
+    en el menu hamburguesa. 
+    */
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+
+/*Footer*/
+footer{ 
+    background: #2F3E46;
+    color: #fff;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/* Contenedor principal */
+#info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgba(47, 163, 100, 0.39);
+}
+
+/* Contenedor de Contactos y Redes Sociales */
+.contactos-redes {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para la sección de Contactos */
+.contactos, .redes-sociales {
+    padding: 1rem;
+}
+
+/* Estilos para la sección del Mapa */
+
+
+.redesImg, .contacto-info{
+    text-align: center;
+}
+
+.contacto-info h3,
+.redes-sociales h3,
+.mapa h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 25px;
+}
+
+.imagen {
+    width: 50px;
+    height: 50px;
+    margin-top: 0.5rem;
+}
+
+/* Mapa de Google */
+#map-container {
+    width: 100%;
+    height: 17rem; /* Ajusta según necesidades */
+}
+
+@media screen and (max-width: 768px) {
+    #info {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+    }
+
+    .contactos-redes, .mapa {
+        grid-column: span 1; /* Ocupa toda la anchura */
+    }
+}
